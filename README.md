@@ -25,7 +25,7 @@ File I/O for data persistence
 
 Operator Overloading (<< and >>)
 
-⚙️ How to Run
+ How to Run :
 To run this project on your local machine, follow these simple steps.
 
 Prerequisite: Ensure you have a C++ compiler installed (like g++ or clang++).
