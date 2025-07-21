@@ -1,58 +1,56 @@
-C++ Command-Line Banking System
-This is a simple but complete command-line banking application written in C++. It demonstrates fundamental Object-Oriented Programming (OOP) principles and file handling for data persistence.
+C++ Command-Line Banking System 🏦
+A complete command-line banking application built in C++ to demonstrate core Object-Oriented Programming (OOP) principles and data persistence.
 
-Description
-The application simulates a basic banking system where a user can perform standard banking operations. All account data is saved to a local file (bank.data), so the information persists across multiple sessions. The system is designed with two main classes: account to represent individual accounts, and bank to manage all the accounts.
+ Features :
+Interactive Functionality: Manage accounts directly from your terminal.
 
-Features
-Open an Account: Create a new bank account with a unique, auto-generated account number.
+Unique Account IDs: New accounts are automatically assigned a unique, incrementing number.
 
-Balance Enquiry: Check the current balance and details of an existing account.
+Robust Error Handling: The application gracefully handles invalid inputs and non-existent accounts.
 
-Deposit: Add funds to an account.
+Data Persistence: Account data is automatically saved to bank.data on exit and reloaded on startup.
 
-Withdraw: Remove funds from an account, with checks for insufficient balance.
+ Tech Stack & Concepts :
+Language: C++17
 
-Close an Account: Delete an existing account from the system.
+Core Libraries: iostream, fstream, map
 
-Show All Accounts: Display a list of all accounts currently in the bank.
+Key Concepts:
 
-Data Persistence: Account data is automatically loaded from bank.data on startup and saved back to the file on exit.
+Object-Oriented Programming (Classes, Encapsulation, Constructors/Destructors)
 
-Concepts Demonstrated
-This project was built to practice and showcase the following C++ and OOP concepts:
+STL Containers (std::map for efficient lookups)
 
-Object-Oriented Programming:
+File I/O for data persistence
 
-Classes and Objects: account and bank classes as blueprints for objects.
+Operator Overloading (<< and >>)
 
-Encapsulation: Using public and private access specifiers to protect data.
+⚙️ How to Run
+To run this project on your local machine, follow these simple steps.
 
-Constructors and Destructors: For automatic setup (loading data) and cleanup (saving data).
+Prerequisite: Ensure you have a C++ compiler installed (like g++ or clang++).
 
-C++ Standard Library:
+Save the Code: Save the source code into a file named banking.cpp.
 
-Using the std::map container for efficient, key-based data storage and retrieval.
+Compile the Application:
+Open your terminal and run the appropriate command:
 
-Standard I/O streams (iostream) for user interaction.
+# If using g++
+g++ -std=c++17 banking.cpp -o banking_app
 
-File I/O streams (fstream) for reading from and writing to files.
+# If using clang++
+clang++ -std=c++17 banking.cpp -o banking_app
 
-Operator Overloading: Overloading the << and >> operators for easy printing and file I/O of account objects.
-
-Static Members: Using a static variable to ensure unique account numbers are generated for every new account.
-
-How to Compile and Run
-Prerequisites: You need a C++ compiler (like g++).
-
-Save the Code: Save the code into a file named banking.cpp.
-
-Compile: Open a terminal or command prompt and run the following command:
-
-g++ banking.cpp -o banking_app
-
-Run: Execute the compiled program:
+Run the Program!
+Execute the compiled file from your terminal:
 
 ./banking_app
+ 
+Developer's Note :
+My primary goal for this project was to build a robust application that correctly manages its own state. I chose to handle data persistence by using the constructor and destructor of the bank class.
 
-The application will start, and a bank.data file will be created in the same directory to store account information.
+The constructor automatically loads all account data from bank.data the moment the program starts.
+
+The destructor automatically saves all data back to the file when the program quits.
+
+This design pattern (known as RAII - Resource Acquisition Is Initialization) ensures that data is always loaded and saved correctly without needing manual function calls in main. It makes the application more resilient and the main logic cleaner. For this project, I felt this automated, object-oriented approach was a more robust solution than manual file handling.
