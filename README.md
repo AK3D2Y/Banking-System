@@ -1,4 +1,4 @@
-C++ Command-Line Banking System 🏦
+C++ Command-Line Banking System 
 A complete command-line banking application built in C++ to demonstrate core Object-Oriented Programming (OOP) principles and data persistence.
 
  Features :
